@@ -53,10 +53,12 @@ duplicates = []  # Return the list of duplicates in this data structure
 # for name_2 in names_2:
 #     if tree.contains(name_2):
 #         duplicates.append(name_1)
-tree = BSTNode(names_1)
+tree = BSTNode(names_1[0])
 for names in names_1:
-    tree.insert(BSTNode(names))
-
+    tree.insert(names)
+for names in names_2:
+    if tree.contains(names):
+        duplicates.append(names)
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
