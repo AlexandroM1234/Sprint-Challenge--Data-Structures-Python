@@ -8,7 +8,7 @@ class RingBuffer:
             self.container.append(item)
         else:
             self.container.clear()
-            self.append(item)
+            self.container.append(item)
                             
     def get(self):
         return self.container
